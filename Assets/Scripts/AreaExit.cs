@@ -13,14 +13,14 @@ public class AreaExit : MonoBehaviour
 
     AreaEntrance theEntrance;
 
-    UIFade uiFace;
+    //UIFade uiFace;
 
     public float waitToLoad = 1f;
     bool shouldLoadAfterFade;
 
     public void Awake()
     {
-        uiFace = FindObjectOfType<UIFade>();
+        //uiFace = FindObjectOfType<UIFade>();
     }
 
     void Start()
@@ -48,7 +48,7 @@ public class AreaExit : MonoBehaviour
         {
             //SceneManager.LoadScene(areaToLoad);
             shouldLoadAfterFade = true;
-            uiFace.FadeToBlack();   // làm màn hình đen
+            UIFade.instance.FadeToBlack();   // làm màn hình đen
             PlayerController.instance.areaTransitionName = areaTransitionName;
         }
     }

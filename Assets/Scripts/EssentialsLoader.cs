@@ -10,13 +10,13 @@ public class EssentialsLoader : MonoBehaviour
 
     void Start()
     {
-        // if (UIFade.instance == null)
-        // {
-        //     Instantiate(uiScreen);
-        // }
+        if (UIFade.instance == null)
+        {
+            UIFade.instance = Instantiate(uiScreen).GetComponent<UIFade>();
+        }
         if (PlayerController.instance == null)
         {
-            Instantiate(player);
+            PlayerController.instance = Instantiate(player).GetComponent<PlayerController>();
         }
     }
 
