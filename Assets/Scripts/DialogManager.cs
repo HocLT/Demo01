@@ -35,7 +35,8 @@ public class DialogManager : MonoBehaviour
                     {
                         dialog.SetActive(false);    // ẩn dialog
 
-                        PlayerController.instance.canMove = true;
+                        //PlayerController.instance.canMove = true;
+                        GameManager.instance.dialogActive = false;
                     }
                     else
                     {
@@ -63,7 +64,8 @@ public class DialogManager : MonoBehaviour
 
         justStarted = true;
 
-        PlayerController.instance.canMove = false;
+        //PlayerController.instance.canMove = false;
+        GameManager.instance.dialogActive = true;
     }
 
     public void CheckName()

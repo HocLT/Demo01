@@ -10,6 +10,8 @@ public class AreaEntrance : MonoBehaviour
         FindObjectOfType<PlayerController>().transform.position = transform.position;
 
         FindObjectOfType<UIFade>().FadeFromBlack(); // chuyển hình ở chế độ trong suốt
+
+        GameManager.instance.fadingBetweenAreas = false;
     }
 
     void Update()

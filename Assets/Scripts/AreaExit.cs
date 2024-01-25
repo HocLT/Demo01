@@ -48,6 +48,8 @@ public class AreaExit : MonoBehaviour
         {
             //SceneManager.LoadScene(areaToLoad);
             shouldLoadAfterFade = true;
+            GameManager.instance.fadingBetweenAreas = true;
+
             UIFade.instance.FadeToBlack();   // làm màn hình đen
             PlayerController.instance.areaTransitionName = areaTransitionName;
         }
